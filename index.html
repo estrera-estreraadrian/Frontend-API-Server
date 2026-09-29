@@ -1,0 +1,154 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Game Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="main-page">
+
+    <header class="hero-section">
+      <h1>VIDEO GAME MANAGER</h1>
+      <p class="sub-title">MANAGE YOUR VIDEO GAME DATABASE</p>
+    </header>
+
+    <!-- ADD GAME -->
+    <section class="form-section">
+      <h2>ADD NEW GAME</h2>
+
+      <form id="addGameForm">
+
+        <input
+          id="titleInput"
+          type="text"
+          placeholder="Game title"
+          required
+        >
+
+        <input
+          id="genreInput"
+          type="text"
+          placeholder="Genre"
+          required
+        >
+
+        <input
+          id="platformInput"
+          type="text"
+          placeholder="Platform"
+          required
+        >
+
+        <input
+          id="yearInput"
+          type="number"
+          placeholder="Release year"
+          required
+        >
+
+        <button type="submit">ADD GAME</button>
+
+      </form>
+
+      <p id="formMessage"></p>
+    </section>
+
+    <!-- LOADING -->
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <span>LOADING...</span>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-hub">
+
+      <form class="search-bar" id="searchForm">
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search games by title..."
+          autocomplete="off"
+        >
+
+        <button type="submit">SEARCH</button>
+
+      </form>
+
+    </div>
+
+    <!-- GAME RESULTS -->
+    <section id="results" class="results"></section>
+    <!-- EDIT GAME MODAL -->
+<div id="editModal" class="modal">
+
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2>EDIT GAME</h2>
+      <button id="closeModal" class="close-button">&times;</button>
+    </div>
+
+    <form id="editGameForm">
+
+      <input
+        id="editTitle"
+        type="text"
+        placeholder="Game title"
+        required
+      >
+
+      <input
+        id="editGenre"
+        type="text"
+        placeholder="Genre"
+        required
+      >
+
+      <input
+        id="editPlatform"
+        type="text"
+        placeholder="Platform"
+        required
+      >
+
+      <input
+        id="editYear"
+        type="number"
+        placeholder="Release year"
+        required
+      >
+
+      <div class="modal-buttons">
+
+        <button type="button" id="cancelEdit">
+          CANCEL
+        </button>
+
+        <button type="submit">
+          SAVE CHANGES
+        </button>
+
+      </div>
+
+    </form>
+
+    <p id="editMessage"></p>
+
+  </div>
+
+</div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
